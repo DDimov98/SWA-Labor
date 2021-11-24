@@ -3,3 +3,7 @@ INSERT INTO TUSER (id, username, password)
        VALUES ("1", "Ausername", "Apassword");
 INSERT INTO TUSER (id, username, password)
        VALUES ("2", "Busername", "Bpassword");
+INSERT INTO TUSER (id, username, password)
+       VALUES ("3", "Dimitar", "Dimov");
+
+
