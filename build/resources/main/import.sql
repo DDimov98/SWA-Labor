@@ -5,5 +5,6 @@ INSERT INTO TUSER (id, username, password)
        VALUES ("2", "Busername", "Bpassword");
 INSERT INTO TUSER (id, username, password)
        VALUES ("3", "Dimitar", "Dimov");
-
+INSERT INTO TUSER (id, username, password)
+       VALUES ("4", "Moha", "Sale");
 
