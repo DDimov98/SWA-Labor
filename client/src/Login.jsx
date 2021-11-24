@@ -49,6 +49,7 @@ class Login extends React.Component {
 			username: '',
 			showPassword: false,
 			loginButtonDisabled: true,
+			wrongPassword: false,
 		};		
 	}
 	
@@ -65,6 +66,7 @@ class Login extends React.Component {
 	  if (event.target.id==="password") {
 		this.setState({password: event.target.value});
 	  }
+	  this.setState({wrongPassword: false});
 	};
   
 	handleClickShowPassword = () => {
@@ -83,6 +85,8 @@ class Login extends React.Component {
 		let tid = data.id;
 		if ( tid !== 0 ) {
 			this.props.authorized();
+		}else{
+		    this.setState({wrongPassword: true});
 		}
     }
 
@@ -138,6 +142,11 @@ class Login extends React.Component {
 						</InputAdornment>
 					}
 					/>
+
+					<font face="Arial" color="red">
+					{this.state.wrongPassword ? 'Wrong Password' : ""}
+					</font>
+
 				</FormControl>
 				<div className={classes.buttonRightAlign}>
 					<Button variant="contained" color="primary" type="submit" value="submit" 
