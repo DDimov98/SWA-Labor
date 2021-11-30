@@ -18,6 +18,8 @@ import org.junit.jupiter.api.Test;
 import de.hse.swa.jodel.orm.dao.UserDao;
 import de.hse.swa.jodel.orm.dao.PostDao;
 import io.quarkus.test.junit.QuarkusTest;
+
+@QuarkusTest
 public class PostDaoTest {
 
         @Inject
@@ -41,6 +43,25 @@ public class PostDaoTest {
             post.setPostedat(new Date());
             postDao.save(post);
             return post;
+        }
+
+        private void printPost(Post post) {
+            System.out.println("id:" + post.getId());
+            System.out.println("text:" + post.getText());
+            System.out.println("authorId:" + post.getAuthorId());
+            System.out.println("posteDat:" + post.getPostedat());
+        }
+
+
+        @Test
+        void addPostTest() {
+
+            User user = createUser("Test");
+            Post post = createPost(user, "Hello World");
+
+            List<Post> posts = postDao.getAllPosts();
+            assertEquals(posts.size(), 1);
+            printPost(post);
         }
 
 }
