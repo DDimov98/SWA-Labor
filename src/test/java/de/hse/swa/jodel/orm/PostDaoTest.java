@@ -34,4 +34,13 @@ public class PostDaoTest {
             return user;
         }
 
+        private Post createPost(User user, String text) {
+            Post post = new Post();
+            post.setText(text);
+            post.setAuthorId(user.getId());
+            post.setPostedat(new Date());
+            postDao.save(post);
+            return post;
+        }
+
 }
