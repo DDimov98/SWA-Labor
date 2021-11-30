@@ -46,9 +46,9 @@ public class PostDao {
 
     }
 
-
     public Post getPost(Long id) {
         return em.find(Post.class, id);
     }
+
 
 }
