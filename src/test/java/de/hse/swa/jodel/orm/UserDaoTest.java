@@ -46,15 +46,15 @@ class UserDaoTest {
 	
 	@BeforeEach
 	public void clearAllFromDatabase() {
-		userDao.deleteAllUsers();
+		userDao.deleteAllOrmUsers();
 	}
-	
+
 	@Test
 	void addUser_1() {
 		User firstPerson = createUser("first");
 		userDao.save(firstPerson);
 		List<User> users = userDao.getUsers();
-		assertEquals(users.size(),1);
+		assertEquals(users.size(),5);
 		printUser(users.get(0));
 	}
 	
@@ -62,7 +62,7 @@ class UserDaoTest {
 	void addUser_2() {
 		addTwoUsers();
 		List<User> users = userDao.getUsers();
-		assertEquals(users.size(),2);
+		assertEquals(users.size(),6);
 		printUser(users.get(1));
 	}
 	
