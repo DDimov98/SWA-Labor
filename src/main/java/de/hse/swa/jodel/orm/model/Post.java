@@ -9,11 +9,18 @@
  *========================================================================*/
 package de.hse.swa.jodel.orm.model;
 
-import java.io.Serializable;
 import java.util.Date;
-
-import javax.persistence.*;
-
+import java.util.List;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 // import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
@@ -23,47 +30,85 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "Post")
-public class Post  {
+public class Post {
 
     @Id
     @SequenceGenerator(name = "postSeq", sequenceName = "ZSEQ_POST_ID", allocationSize = 1, initialValue = 10)
     @GeneratedValue(generator = "postSeq")
-    
+
     @Column(name = "id")
     private Long id;
 
     @Column(name = "text")
     private String text;
 
+    @Column(name = "longitude")
+    private Double longitude;
+
+    @Column(name = "latitude")
+    private Double latitude;
+
+    @Column(name = "postedat")
+    private Date postedat;
+
     @Column(name = "authorId")
     private Long authorId;
 
-    @Column(name = "pdat")
-    private Date pdat;
-
-    public Post() { }
-
-    public Post(String text, Long userId) {
-        this.text = text;
-        this.authorId = userId;
-        this.pdat = new Date();
+    public Post() {
     }
 
-    public Long getId() {return id;}
+    public Post(String text, double longitude, double latitude, Long userId) {
+        this.text =text;
+        this.longitude = longitude;
+        this.latitude = latitude;
+        this.authorId = userId;
+        this.postedat = new Date();
+    }
 
-    public void setId(Long id) {this.id =id;}
+    public Long getId() {
+        return id;
+    }
 
-    public String getText() {return text;}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-    public void setText(String text) {this.text = text;}
+    public String getText() {
+        return text;
+    }
 
-    public Date getPdat() {return pdat;}
+    public void setText(String text) {
+        this.text = text;
+    }
 
-    public void setPdat(Date pdat) {this.pdat = pdat;}
+    public Double getLongitude() {
+        return longitude;
+    }
 
-    public Long getAuthorId() {return  this.authorId;}
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
+    public Double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public Date getPostedat() {
+        return postedat;
+    }
+
+    public void setPostedat(Date postedat) {
+        this.postedat = postedat;
+    }
+
+    public Long getAuthorId() { return this.authorId; }
 
     public void setAuthorId(Long authorId) {
+
         this.authorId = authorId;
     }
 }
