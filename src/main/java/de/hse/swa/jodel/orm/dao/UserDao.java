@@ -50,7 +50,7 @@ public class UserDao {
 	}
 
 	public List<User> getUsers() {
-		Query q = em.createQuery("select c from Tuser c");
+		Query q = em.createQuery("select c from User c");
 		List<User> users = q.getResultList();
 		return users;
 	}
@@ -79,7 +79,7 @@ public class UserDao {
     public void deleteAllUsers() {
     	try {
 
-    	    Query del = em.createQuery("DELETE FROM Tuser WHERE id >= 0");
+    	    Query del = em.createQuery("DELETE FROM User WHERE id >= 0");
     	    del.executeUpdate();
 
     	} catch (SecurityException | IllegalStateException  e) {
@@ -93,7 +93,7 @@ public class UserDao {
     public void deleteAllOrmUsers() {
     	try {
 
-    	    Query del = em.createQuery("DELETE FROM Tuser WHERE id >= 10");
+    	    Query del = em.createQuery("DELETE FROM User WHERE id >= 10");
     	    del.executeUpdate();
 
     	} catch (SecurityException | IllegalStateException  e) {
