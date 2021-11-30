@@ -66,5 +66,14 @@ public class PostResource {
 
         return post;
     }
+    
+    @POST
+    @Path("createPost")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Post createPost(@QueryParam("text") String text, @QueryParam("lon") double longitude, @QueryParam("lat") double latitude, @QueryParam("authorId") Long authorId ){
+
+        Post post = new Post(text, longitude, latitude, authorId);
+        return postDao.save(post);
+    }
 
 }
