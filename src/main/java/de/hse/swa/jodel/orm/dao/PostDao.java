@@ -67,5 +67,18 @@ public class PostDao {
         em.remove(post);
     }
 
+    @Transactional
+    public void deleteAllPosts() {
+        try {
+
+            Query del = em.createQuery("DELETE FROM Post WHERE id >= 0");
+            del.executeUpdate();
+
+        } catch (SecurityException | IllegalStateException  e) {
+            e.printStackTrace();
+        }
+
+        return;
+    }
 
 }
