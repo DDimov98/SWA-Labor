@@ -16,6 +16,7 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
+import javax.transaction.Transactional;
 import java.util.List;
 
 @ApplicationScoped
@@ -48,6 +49,22 @@ public class PostDao {
 
     public Post getPost(Long id) {
         return em.find(Post.class, id);
+    }
+
+
+    @Transactional
+    public Post save(Post post) {
+        if (post.getId() != null) {
+            post = em.merge(post);
+        } else {
+            em.persist(post);
+        }
+        return post;
+    }
+
+    @Transactional
+    public void removePost(Post post) {
+        em.remove(post);
     }
 
 
