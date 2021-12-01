@@ -45,6 +45,19 @@ public class Voting {
 
 	public Voting() {
 	}
-	
+
+	public Voting(int value) { this.value = value ;}
+
+	public Long getId() { return id; }
+
+	public int getValue() { return value; }
+	public void setValue(int value) { this.value = value; }
+
+	public Long getAuthorId () {return authorId; }
+	public void setAuthorId(Long authorId) {this.authorId = authorId; }
+
+
+	public Long getCommentId() {return commentId; }
+	public void setCommentId(Long commentId) {this.commentId= commentId; }
 
 }
