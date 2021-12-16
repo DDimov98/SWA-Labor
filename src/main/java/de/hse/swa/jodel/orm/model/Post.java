@@ -1,12 +1,3 @@
-/*========================================================================*
- *                                                                        *
- * This software is governed by the GPL version 2.                        *
- *                                                                        *
- * Copyright: Joerg Friedrich, University of Applied Sciences Esslingen   *
- *                                                                        *
- * $Id:$
- *                                                                        *
- *========================================================================*/
 package de.hse.swa.jodel.orm.model;
 
 import java.util.Date;
@@ -21,13 +12,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-// import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
-/**
- * The persistent class for the POST database table.
- * 
- */
 @Entity
 @Table(name = "Post")
 public class Post {
@@ -111,5 +97,5 @@ public class Post {
 
         this.authorId = authorId;
     }
-}
 
+}	 
