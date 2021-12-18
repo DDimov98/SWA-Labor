@@ -21,7 +21,8 @@ public class UserResourceTest
                 .when().get("/Users/getAllUsers")
                 .then()
 
-                .body(is("[{\"id\":1,\"password\":\"Apassword\",\"username\":\"Ausername\"},{\"id\":2,\"password\":\"Bpassword\",\"username\":\"Busername\"},{\"id\":3,\"password\":\"A\",\"username\":\"A\"}]"));
+                .body(is("[{\"id\":1,\"password\":\"Apassword\",\"username\":\"Ausername\"},{\"id\":2,\"password\":" +
+                        "\"Bpassword\",\"username\":\"Busername\"},{\"id\":3,\"password\":\"A\",\"username\":\"A\"}]"));
     }
 
     //Gets a specific user
