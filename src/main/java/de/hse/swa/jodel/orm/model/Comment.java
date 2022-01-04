@@ -65,7 +65,7 @@ public class Comment {
     public void setId (Long id) { this.id =id; }
 
     public String getText() { return text; }
-    public void setText() { this.text = text; }
+    public void setText(String commentText) { this.text = text; }
 
     public Double getLatitude() { return latitude; }
     public void setLatitude (double latitude) { this.latitude = latitude;}
