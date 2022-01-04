@@ -20,7 +20,6 @@ import de.hse.swa.jodel.orm.model.Comment;
 import de.hse.swa.jodel.orm.model.Post;
 import de.hse.swa.jodel.orm.model.User;
 
-import de.hse.swa.jodel.orm.dao.VotingDao;
 import de.hse.swa.jodel.orm.dao.CommentDao;
 import de.hse.swa.jodel.orm.dao.PostDao;
 import de.hse.swa.jodel.orm.dao.UserDao;
@@ -29,8 +28,7 @@ import de.hse.swa.jodel.orm.dao.UserDao;
 @QuarkusTest
 class CommentDaoTest {
 
-    @Inject
-    VotingDao votingDao;
+
     @Inject
     PostDao postDao;
     @Inject
