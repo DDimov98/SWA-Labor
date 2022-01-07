@@ -20,14 +20,28 @@ const styles = theme => ({
 	loginbox: {
 		textAlign: 'center',
 		width: '50ch',
-		border: '1px solid gray',
+		border: '1px solid black',
 		borderRadius: '3px',
 		padding: '10px',
 	},
+
+	fehlermeldung: {
+		textAlign: 'center',
+		width: '100ch',
+		border: '1px solid black',
+		borderRadius: '5px',
+		padding: '50px',
+	},
+
+
+
+
 	buttonRightAlign: {
 		padding: '20px',
 		textAlign: 'right',
 	},
+
+
 	margin: {
 	  margin: theme.spacing(1),
 	},
@@ -44,15 +58,16 @@ class Login extends React.Component {
 
 	constructor(props) {
 		super(props);
-	    this.state = {	  
+	    this.state = {
+			currentUser: [],
 			password: '',
 			username: '',
 			showPassword: false,
 			loginButtonDisabled: true,
 			wrongPassword: false,
-		};		
+		};
 	}
-	
+
 	handleChange = (event) => {
 	const username = this.state.username;
 	  if (event.target.id==="username") {
@@ -66,9 +81,9 @@ class Login extends React.Component {
 	  if (event.target.id==="password") {
 		this.setState({password: event.target.value});
 	  }
-	  this.setState({wrongPassword: false});
+	  this.setState({wrongPassword: false });
 	};
-  
+
 	handleClickShowPassword = () => {
 	  this.setState({showPassword: !this.state.showPassword });
 	};
@@ -84,15 +99,15 @@ class Login extends React.Component {
     processData = ( data ) => {
 		let tid = data.id;
 		if ( tid !== 0 ) {
-			this.props.authorized();
+			this.props.authorized(data);
 		}else{
-		    this.setState({wrongPassword: true});
+			this.setState({wrongPassword: true });
 		}
     }
 
 	handleLoginSubmit = ( event ) => {
         var formdata = JSON.stringify( this.state );
-        fetch( this.props.url + "Users/login", {
+        fetch( this.props.url + "/Users/login", {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json',
@@ -108,15 +123,21 @@ class Login extends React.Component {
             });
 		event.preventDefault();
     }
-  
+
 	render() {
 		const { classes } = this.props;
 		return (
+
+
 		<div className={classes.center}>
+
+
+
+
 			<div className={classes.loginbox}>
 			<form onSubmit={this.handleLoginSubmit}>
 				<FormControl className={clsx(classes.margin, classes.textField)}>
-					<InputLabel htmlFor="login">Login</InputLabel>
+					<InputLabel htmlFor="login">Username</InputLabel>
 					<Input
 					id="username"
 					type='text'
@@ -130,7 +151,9 @@ class Login extends React.Component {
 					type={this.state.showPassword ? 'text' : 'password'}
 					value={this.state.password}
 					onChange={this.handleChange}
+
 					endAdornment={
+
 						<InputAdornment position="end">
 						<IconButton
 							aria-label="toggle password visibility"
@@ -140,23 +163,32 @@ class Login extends React.Component {
 							{this.state.showPassword ? <Visibility /> : <VisibilityOff />}
 						</IconButton>
 						</InputAdornment>
+
 					}
 					/>
 
 					<font face="Arial" color="red">
-					{this.state.wrongPassword ? 'Wrong Password' : ""}
+					{this.state.wrongPassword ? 'Passwort falsch': ""}
 					</font>
 
 				</FormControl>
 				<div className={classes.buttonRightAlign}>
-					<Button variant="contained" color="primary" type="submit" value="submit" 
+					<Button variant="contained" color="primary" type="submit" value="submit"
 							disabled={this.state.loginButtonDisabled}>
 							Login
 					</Button>
 				</div>
-			</form>
+				</form>
+
 			</div>
+
+
 		</div>
+
+
+
+
+
 		);
 	}
 }
