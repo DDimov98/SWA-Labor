@@ -27,7 +27,7 @@ const styles = theme => ({
 		boxSizing: "borderBox",
 		borderRadius: "10px 10px 0px 10px",
 		background: "#5858",
-		fontFamily: "monospace",
+		fontFamily: "georgia",
 		//fontSize: "10px",
 		color: "black",
 	},
