@@ -11,7 +11,7 @@ const styles = theme => ({
 		padding: "2%",
 		boxSizing: "borderBox",
 		borderRadius: "3px 15px 5px 30px",
-		background: "#5DCD",
+		background: "#CEE3F6",
 		marginTop: "2%",
 	},
 
@@ -21,9 +21,9 @@ const styles = theme => ({
 		padding: "2%",
 		boxSizing: "borderBox",
 		borderRadius: "10px 10px 0px 10px",
-		background: "#5858",
+		background: "#585858",
 		marginTop: "2%",
-		fontFamily: "monospace",
+		fontFamily: "georgia",
 		color: "black",
 	},
 
@@ -35,8 +35,8 @@ const styles = theme => ({
 		borderRadius: "0px 10px 10px 10px",
 		background: "#A4A4A4",
 		marginTop: "0%",
-		fontFamily: "serif",
-		color: "grey",
+		fontFamily: "cursive",
+		color: "black",
 	},
 });
 
