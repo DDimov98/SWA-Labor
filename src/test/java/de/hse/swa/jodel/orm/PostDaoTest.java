@@ -60,7 +60,7 @@ public class PostDaoTest {
             Post post = createPost(user, "Hello World");
 
             List<Post> posts = postDao.getAllPosts();
-            assertEquals(posts.size(), 1);
+            assertEquals(posts.size(), 3);
             printPost(post);
         }
 
