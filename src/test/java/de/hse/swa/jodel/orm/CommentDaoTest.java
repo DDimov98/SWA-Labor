@@ -100,7 +100,7 @@ class CommentDaoTest {
     void addComment() {
         Comment comment = createComment("Test", "Test1", "TextText", "PostTest");
         List<Comment> comments = commentDao.getAllComments();
-        assertEquals(comments.size(),1);
+        assertEquals(comments.size(),3);
         printComment(comments.get(0));
     }
 }
