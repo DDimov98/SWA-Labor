@@ -10,10 +10,9 @@ const styles = theme => ({
 
 
 	kommentar: {
-		width: "90%",
+		width: "89%",
 		padding: "5%",
 		boxSizing: "borderBox",
-		borderRadius: "3px 30px 3px 30px",
 		background: "#B3CFE5",
 		marginTop: "2%",
 	},
