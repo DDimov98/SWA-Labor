@@ -12,7 +12,7 @@ const styles = theme => ({
 		padding: "2%",
 		boxSizing: "borderBox",
 		borderRadius: "0px 10px 10px 0px",
-		background: "#A4A4A4",
+		background: "#1589E5",
 		marginTop: "0%",
 		fontFamily: "cursive",
 		color: "black",
@@ -23,7 +23,7 @@ const styles = theme => ({
 		padding: "3%",
 		boxSizing: "borderBox",
 		borderRadius: "10px 10px 10px 0px",
-		background: "#A4A4A4",
+		background: "#1589E5",
 		marginTop: "1%",
 	},
 	button:{

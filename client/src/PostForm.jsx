@@ -14,7 +14,7 @@ const styles = theme => ({
 		padding: "5%",
 		boxSizing: "borderBox",
 		borderRadius: "3px 30px 3px 30px",
-		background: "#D8F6CE",
+		background: "#B3CFE5",
 		marginTop: "2%",
 	},
 

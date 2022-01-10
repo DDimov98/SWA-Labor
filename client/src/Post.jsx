@@ -11,7 +11,7 @@ const styles = theme => ({
 		padding: "2%",
 		boxSizing: "borderBox",
 		borderRadius: "3px 15px 5px 30px",
-		background: "#CEE3F6",
+		background: "#CDDEEC",
 		marginTop: "2%",
 	},
 
@@ -21,7 +21,7 @@ const styles = theme => ({
 		padding: "2%",
 		boxSizing: "borderBox",
 		borderRadius: "10px 10px 0px 10px",
-		background: "#585858",
+		background: "#86A4BB",
 		marginTop: "2%",
 		fontFamily: "georgia",
 		color: "black",
@@ -33,7 +33,7 @@ const styles = theme => ({
 		padding: "2%",
 		boxSizing: "borderBox",
 		borderRadius: "0px 10px 10px 10px",
-		background: "#A4A4A4",
+		background: "#1589E5",
 		marginTop: "0%",
 		fontFamily: "cursive",
 		color: "black",
@@ -70,7 +70,7 @@ render() {
             <font >
 
 				<div className={classes.postForm}>
-					{this.state.author.username} schieb am {this.state.post.postedat.slice(0,10).replace("-",".").replace("-",".") } um {this.state.post.postedat.slice(11,16)}
+					{this.state.author.username} postet am {this.state.post.postedat.slice(0,10).replace("-",".").replace("-",".") } um {this.state.post.postedat.slice(11,16)}
 
 				</div>
 

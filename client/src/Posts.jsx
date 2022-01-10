@@ -6,27 +6,34 @@ import InputLabel from "@material-ui/core/InputLabel";
 import Input from "@material-ui/core/Input";
 import FormControl from "@material-ui/core/FormControl";
 import Button from "@material-ui/core/Button";
+import { PeopleAlt } from "@material-ui/icons";
+import { Typography } from "@material-ui/core";
+
 
 
 import PostList from './PostList'
 
+
+
 const styles = theme => ({
 	center: {
-
-		padding: "2%",
-		boxSizing: "borderBox",
-		borderRadius: "60px 60px 60px 60px",
-		background: "#FE642E",
-		fontfamily: "Gerogia",
-		marginTop: "2%",
+		padding: "7%",
+		boxSizing: "",
+		borderRadius: "100px 100px 100px 100px",
+		background: "#5C7B94",
+		fontfamily: "cursive",
+		marginLeft: "0px",
+	},
+	icon: {
+        padding: "%",
+        marginTop: "px",
 	},
 	titel: {
-
 		padding: "0%",
-		marginLeft: "38%",
-		fontfamily: "cursive",
+		marginLeft: "5%",
 		fontSize: "300%",
-		marginTop: "0%",
+		marginTop: "2%",
+		background: "#5C7B94",
 	},
     	post: {
 			marginLeft: "5%",
@@ -34,14 +41,13 @@ const styles = theme => ({
 			padding: "2%",
 			boxSizing: "borderBox",
 			borderRadius: "10px 10px 10px 10px",
-			background: "#58FAAC",
+			background: "#B3CFE5",
 			marginTop: "2%",
 		},
     	textField: {
     		width: "75%",
     		padding: '1px',
     	},
-
     	buttonRightAlign: {
     		padding: '20px',
     		textAlign: 'right',
@@ -127,10 +133,12 @@ class Posts extends React.Component {
 	render() {
 		const { classes } = this.props;
 		return (
+
 			console.log( "Benutzer ist in Post:" + this.state.currentUser.username),
-		<div className={classes.center}>
+            <div className={classes.center}>
 			<div className={classes.titel}>
-			Jodel
+			   <PeopleAlt fontSize="large" className={classes.icon} />
+			   <Typography variant="h7"> Jodel App </Typography>
 			</div>
 			<div className={classes.post}>
 
@@ -152,9 +160,6 @@ class Posts extends React.Component {
             	    </div>
 			{console.log("Hilfe ist vor Post: " + this.state.hilfe)}
 			<PostList hilfe={this.state.hilfe} currentUser={this.state.currentUser}></PostList>
-		<a href="https://img.welt.de/img/gesundheit/mobile160289794/0571620317-ci23x11-w1136/Penis-Frage.jpg">
-		Katzenviedeos
-		</a>
 
 		</div>
 

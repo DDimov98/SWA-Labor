@@ -10,7 +10,7 @@ const styles = theme => ({
 		padding: "0%",
 		boxSizing: "borderBox",
 		borderRadius: "3px 15px 5px 30px",
-		background: "#FE642E",
+		background: "#5C7B94",
 }
 });
 

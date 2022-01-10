@@ -7,11 +7,11 @@ import PostList from "./PostList";
 
 const styles = theme => ({
 	center: {
-		width: "96%",
+		width: "95%",
 		padding: "2%",
 		boxSizing: "borderBox",
 		borderRadius: "3px 30px 3px 30px",
-		background: "#58FAAC",
+		background: "#B3CFE5",
 		marginTop: "2%",
 		fontFamily: "cursive",
 	},
@@ -56,7 +56,7 @@ componentDidMount()
 
 		<div className={classes.center}>
 			<div className={classes.kommentare}>
-				Kommentare:
+				Comments:
 			</div>
 			{this.state.comments.map((comment, index) => (
 

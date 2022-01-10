@@ -11,22 +11,13 @@ const styles = theme => ({
 		minHeight: '10px',
 	},
 
-	button:{
-		justifyContent: 'right',
-		alignItems: 'right',
-		minHeight: '10px',
-		marginRight: '0px',
-		style: "right",
-		marginLeft: "10%",
-		},
-
 	authorForm: {
 		marginLeft: "0%",
 		width: "85%",
 		padding: "2%",
 		boxSizing: "borderBox",
 		borderRadius: "10px 10px 0px 10px",
-		background: "#5858",
+		background: "#86A4BB",
 		fontFamily: "georgia",
 		//fontSize: "10px",
 		color: "black",
@@ -125,18 +116,6 @@ class Comment extends React.Component {
 
 				<CommentForm currentUser={this.state.user} comment = {this.state.comment}></CommentForm>
 			</div>
-
-
-			<div className={classes.button}>
-				<Button variant="contained" color="primary" onClick={() => this.upvote()}>
-
-					{this.state.like.length} likes
-				</Button>
-				<Button variant="contained" color="primary" onClick={() => this.downvote()}>
-
-					{this.state.dislike.length} dislikes
-				</Button>
-		</div>
 
 			<div>
 
