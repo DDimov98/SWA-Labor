@@ -33,7 +33,7 @@ const styles = theme => ({
 		padding: "2%",
 		boxSizing: "borderBox",
 		borderRadius: "0px 10px 10px 10px",
-		background: "#1589E5",
+		background: "#227DB0",
 		marginTop: "0%",
 		fontFamily: "cursive",
 		color: "black",
