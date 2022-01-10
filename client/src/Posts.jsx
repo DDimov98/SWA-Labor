@@ -19,20 +19,17 @@ const styles = theme => ({
 	center: {
 		padding: "7%",
 		boxSizing: "",
-		borderRadius: "100px 100px 100px 100px",
 		background: "#5C7B94",
 		fontfamily: "cursive",
 		marginLeft: "0px",
 	},
 	icon: {
-        padding: "%",
-        marginTop: "px",
+        marginTop: "0px",
 	},
 	titel: {
 		padding: "0%",
 		marginLeft: "5%",
 		fontSize: "300%",
-		marginTop: "2%",
 		background: "#5C7B94",
 	},
     	post: {
@@ -40,7 +37,6 @@ const styles = theme => ({
 			width: "86%",
 			padding: "2%",
 			boxSizing: "borderBox",
-			borderRadius: "10px 10px 10px 10px",
 			background: "#B3CFE5",
 			marginTop: "2%",
 		},
