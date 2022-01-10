@@ -57,7 +57,7 @@ public class CommentResourceTest {
 
                 .when().get("/Comments/getComments?postId=1")
                 .then()
-                .body(is("[{\"authorId\":1,\"id\":1,\"latitude\":2345.0,\"longitude\":245.0,\"postId\":1,\"postedat\":\"2022-01-05T00:00:00Z[UTC]\",\"text\":\"CommentNumber1\"}]"));
+                .body(is("[{\"authorId\":1,\"id\":1,\"latitude\":6969.0,\"longitude\":245.0,\"postId\":1,\"postedat\":\"2022-01-01T00:00:00Z[UTC]\",\"text\":\"First Comment\"},{\"authorId\":2,\"id\":2,\"latitude\":2545.0,\"longitude\":69.0,\"postId\":1,\"postedat\":\"2022-01-01T00:00:00Z[UTC]\",\"text\":\"Second Comment\"}]"));
     }
 
     //Post 2
@@ -70,7 +70,7 @@ public class CommentResourceTest {
                 .when().get("/Comments/getComments?postId=2")
                 .then()
 
-                .body(is("[{\"authorId\":2,\"id\":2,\"latitude\":2545.0,\"longitude\":87.0,\"postId\":2,\"postedat\":\"2022-01-05T00:00:00Z[UTC]\",\"text\":\"FirstTest\"}]"));
+                .body(is("[{\"authorId\":2,\"id\":3,\"latitude\":2222.0,\"longitude\":22.0,\"postId\":2,\"postedat\":\"2022-01-01T00:00:00Z[UTC]\",\"text\":\"Third Comment\"}]"));
     }
 
 }
