@@ -10,7 +10,6 @@ const styles = theme => ({
 		width: "95%",
 		padding: "2%",
 		boxSizing: "borderBox",
-		borderRadius: "3px 30px 3px 30px",
 		background: "#B3CFE5",
 		marginTop: "2%",
 		fontFamily: "cursive",
